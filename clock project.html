@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tite></tite>
+        <script>
+            var a;
+            var date;
+            var time;
+            setInterval(() => {
+
+                a=new Date();
+                options={weekday: 'long', year: 'numeric', month:'long',day:'numeric'};   
+                date=a.toLocaleDateString();
+                time=a.getHours() + ":" + a.getMinutes() +":" + a.getSeconds();
+            document.getElementById('time').innerHTML=time + "<br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on &nbsp;" + date;
+                    }, 1000);
+        </script>
+        <style>
+            *{
+                margin:0%;
+                padding: 0%;
+            }
+            body nav{
+                width: 100%;
+                height: 75px;
+                display: flex;
+                align-items: center;
+                background-color: rgb(120, 10, 10);
+                color:white;
+                font-size: 30px;
+                /* font-style: italic; */
+                font-family: "Times New Roman", Times, serif;
+                font-weight: bolder;
+            }
+            nav img{
+                width: 100px;
+                height:77px;
+                align-items: center;
+            }
+            .clocktable{
+                width: 88%;
+                height: 700px;
+                background-image: url("https://images8.alphacoders.com/428/thumb-1920-428595.jpg");
+                margin-left: 7%;
+                margin-right: 5%;
+            }
+            .clocktable #box{
+                width:800px;
+                height: 680px;
+                padding-top: 20px;
+                backdrop-filter: blur(32px);
+                /* border: 8px solid black; */
+                margin-left: 60px;
+                border-radius: 34px ;
+            }
+            #p{
+                color:violet;
+                text-align: center;
+                font-family: 'Courier New', Courier, monospace;
+                font-style: inherit;
+                font-size: 30px;
+                padding-left: 50px;
+                padding-top: 5px;
+                padding-right: 50px;
+
+            }
+            #p1{
+                color: white;
+                padding-top: 28px;
+                font-size: 40px;
+                font-style: normal;
+                font-family: 'Times New Roman', Times, serif;
+                margin-left: 120px;
+
+            }
+            #p2{
+                color: white;
+                padding-top: 22px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 23px;
+                margin-left: 140px;
+            
+            }
+            p{
+                font-size: 22px;
+                padding-top: 32px;
+                font-style: italic;
+                font-weight: bolder;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color:black;
+                margin-left: 120px;
+            
+            }
+           
+
+        </style>
+               
+    </head>
+
+    <body>
+        <nav>
+            <script src="https://kit.fontawesome.com/bf9759aa5a.js" crossorigin="anonymous"></script>
+            <span><i class="far fa-clock"></i>World Clock</span>
+        </nav>
+        <div class="clocktable">
+            <div id="box">
+                <h1 id="p">TIME IS AN ILLUSION</h1>
+                <h1 id="p1">Current Time : <span id="time"></span></h1>
+                <h1 id="p2">Don't Count Every Hour In The Day,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; make every hour in your day count
+                </h1>>
+                <P>Every bad situation will have something positive<br>
+                    Even a stopped clock shows correct time twice a day </P>
+            </div>
+
+        </div>
+    </body>
+</html>
